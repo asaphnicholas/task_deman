@@ -106,7 +106,7 @@
         "options": {
           "connection": "dbmasterclasse",
           "sql": {
-            "query": "SELECT t.id, t.nome, t.descricao, t.estimativa_horas, t.nivel\nFROM itv.tarefas t\nLEFT JOIN itv.usuarios_tarefas ut\nON t.id = ut.tarefa_id AND ut.usuario_id = :P1\nWHERE ut.tarefa_id IS NULL;",
+            "query": "SELECT t.id, t.nome, t.descricao, t.estimativa_horas, t.nivel, t.pontuacao\nFROM itv.tarefas t\nLEFT JOIN itv.usuarios_tarefas ut\nON t.id = ut.tarefa_id AND ut.usuario_id = :P1\nWHERE ut.tarefa_id IS NULL;",
             "params": [
               {
                 "name": ":P1",
@@ -136,6 +136,10 @@
           {
             "name": "nivel",
             "type": "text"
+          },
+          {
+            "name": "pontuacao",
+            "type": "number"
           }
         ]
       }

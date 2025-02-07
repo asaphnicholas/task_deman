@@ -50,5 +50,36 @@ dmx.config({
       ],
       "outputType": "text"
     }
+  },
+  "ranking_selos": {
+    "repeat_ranking": {
+      "meta": [
+        {
+          "name": "ranking",
+          "type": "number"
+        },
+        {
+          "name": "nome",
+          "type": "text"
+        },
+        {
+          "name": "foto",
+          "type": "text"
+        },
+        {
+          "name": "total_pontos",
+          "type": "number"
+        }
+      ],
+      "outputType": "text"
+    }
+  },
+  "resete_senha": {
+    "query": [
+      {
+        "type": "text",
+        "name": "token"
+      }
+    ]
   }
 });
